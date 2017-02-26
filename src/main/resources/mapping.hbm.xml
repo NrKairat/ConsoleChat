@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Server.Message" table="messages">
+        <id name="id" type="int" column="message_id">
+            <generator class="identity"/>
+        </id>
+        <property name="sender" column="message_sender" type="string"/>
+        <property name="receiver" column="message_receiver" type="string"/>
+        <property name="body" column="message_body" type="string"/>
+        <property name="timestamp" column="message_timestamp" type="timestamp"/>
+    </class>
+
+</hibernate-mapping>
